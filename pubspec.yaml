@@ -20,6 +20,6 @@ dev_dependencies:
 flutter:
   plugin:
     platforms:
-      some_platform:
-        pluginClass: somePluginClass
+      ios:
+        pluginClass: HelpScoutFlutterPlugin
 
