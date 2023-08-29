@@ -20,6 +20,7 @@ public class HelpScoutFlutterPlugin: NSObject, FlutterPlugin {
       result("Beacon successfully initialized")
       break;
     case "openBeacon":
+      let beaconId = arguments!["beaconId"] as? String
       openBeacon(beaconId: beaconId!)
       break;
     case "clearBeacon":
