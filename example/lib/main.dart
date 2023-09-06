@@ -35,13 +35,17 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Help Scout example app'),
         ),
         body: Center(
-          child: TextButton(
+          child: ElevatedButton(
             onPressed: () {
               _helpScoutFlutterPlugin
                   .initialize()
                   .then((value) => _helpScoutFlutterPlugin.open());
             },
-            child: const Text('Tech Button'),
+            style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateColor.resolveWith((states) => Colors.blue[700]!),
+            ),
+            child: const Text('HelpScout Button'),
           ),
         ),
       ),
