@@ -1,18 +1,35 @@
 # help_scout_flutter
 
-A new Flutter plugin project.
+A new Flutter plugin for the implementation of HelpScout Beacon.
 
-## Getting Started
+## Getting started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+### Add dependency
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can use the command to add help_scout_flutter as a dependency with the latest stable version:
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+```console
+$ dart pub add help_scout_flutter
+```
+
+Or you can manually add help_scout_flutter into the dependencies section in your pubspec.yaml:
+
+```yaml
+dependencies:
+  help_scout_flutter: ^replace-with-latest-version
+```
+
+### Super simple to use
+
+```dart
+ ElevatedButton(
+    onPressed: () {
+        HelpScoutFlutter _helpScoutFlutterPlugin = HelpScoutFlutter(beaconId: '*******beacon-id******',);
+        _helpScoutFlutter.initialize()
+              .then((value) => _helpScoutFlutter.open());
+    },
+    style: ButtonStyle(
+    backgroundColor: MaterialStateColor.resolveWith((states) => Colors.blue[700]!)),
+    child: const Text('HelpScout Button'),
+),
+```
