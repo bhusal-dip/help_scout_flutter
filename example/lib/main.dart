@@ -18,18 +18,7 @@ class _MyAppState extends State<MyApp> {
 
   void initBeacon() {
     // Initialize with beacon ID and user info
-    final user = HSBeaconUser(
-      email: 'john@example.com',
-      name: 'John Doe',
-      company: 'Example Corp',
-      jobTitle: 'Developer',
-      avatar: 'https://example.com/avatar.png',
-    );
-
-    _helpScoutFlutterPlugin = HelpScoutFlutter(
-      beaconId: '*******beacon-id******',
-      user: user,
-    );
+    final user = HSBeaconUser(email: 'john@example.com', name: 'John Doe');
   }
 
   @override
